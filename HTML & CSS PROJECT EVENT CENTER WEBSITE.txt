@@ -1,0 +1,11 @@
+In this event center website, I have made the event center highlight night music festivals. In the homepage labeled index.html, I introduce the event center and highlights the events coming up. I created a navbar and it is functional. The home page has a banner that represents a theme of "Unforgettable Nights, Unforgettable Sounds. Where music tells a story. In the banner is the welcome message and the "About Us" section is below the welcome banner. I included the bonus feature with the links to the events page.
+
+On the events page, I used semantic element, section and article to structure the event details. I included images and descriptions for three event. The events highlight the date, time, and description of each concert that night.
+
+The menu page displays three category header menu of appetizers, mains, and desserts. The categpries are divided and has two rows per category with the name of the item, price, and image of the product. I included for bonus the hover effects and striped rows.
+
+The location page is simple with the festival location header, address, hours of when the center is open, and nearby landmarks close by the center. I embedded a google map and centered the content.
+
+The contact us page shows a form with the fields for a name, e-mail, and message box. Form validation is shown with the red required star symbol. I included sample data shown for bonus to simulate submissions. I had trouble figuring out how to center the contact us box, so I decided to keep it to the side for now.
+
+Overall, I established media queries to ensure the sites works on desktops, tablets, and mobile devices. I have used flexbox for layouts and alignment within the site header, site logo, navbar, event page, location page, and throughout the other pages as well. The colors I used are blueviolet, plum, shades of purple, black, and white. The font I used was times roman, georgia, san-serifs. 
