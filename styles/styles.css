@@ -1,0 +1,218 @@
+/* 1. FONT IMPORT */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap");
+
+/* 2. GLOBAL STYLES */
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: rgb(216, 195, 248);
+  font-family: "Montserrat", sans-serif; /* Global Body Font */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/************ 3. NAVIGATION STYLING *************/
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: rgba(138, 43, 226, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.site-logo {
+  text-decoration: none;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 1px;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.2rem;
+  padding: 8px 15px;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: blueviolet;
+}
+
+/* The white sliding background effect */
+.navbar a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+  z-index: -1;
+  border-radius: 4px;
+}
+
+.navbar a:hover::before {
+  transform: scaleX(1);
+}
+
+/********* 4. MAIN CONTENT & SECTIONS **********/
+.site-main {
+  flex: 1; /* Pushes footer to bottom */
+  padding: 40px 20px;
+}
+
+.welcome,
+.about,
+.location-info,
+.contact-form-container {
+  max-width: 1000px;
+  margin: 0 auto 40px auto;
+}
+
+.welcome {
+  background-color: plum;
+  padding: 60px 20px;
+  color: white;
+  border-radius: 25px;
+  text-align: center;
+  transition: box-shadow 0.3s;
+}
+
+.welcome:hover {
+  box-shadow: 0px 10px 30px rgba(75, 23, 170, 0.4);
+}
+
+/*********** 5. EVENT GRID & CARDS **********/
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  margin: 2rem 0;
+}
+
+.event-card {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.event-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  background-color: #2a2a2a;
+}
+
+.event-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+/*********** 6. MENU TABLE **********/
+.menu-table {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: rgb(55, 4, 104);
+  color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.menu-table th {
+  background-color: plum;
+  padding: 1.2rem;
+}
+
+.menu-table td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu-table tbody tr:hover {
+  background-color: rgba(238, 130, 238, 0.2);
+}
+
+/*********** 7. CONTACT FORM **********/
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box; /* Crucial for width: 100% */
+}
+
+/*********** 8. RESPONSIVE DESIGN **********/
+@media screen and (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .navbar {
+    margin-top: 15px;
+  }
+  .navbar ul {
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .menu-table {
+    display: block;
+    overflow-x: auto;
+  }
+  .site-logo {
+    font-size: 1.4rem;
+  }
+}
+
+/*********** 9. FOOTER **********/
+.site-footer {
+  background-color: blueviolet;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
